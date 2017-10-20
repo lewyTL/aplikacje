@@ -16,7 +16,7 @@ public class KwotaTest {
         @Test
         public void metodaToStringDzialaDla00Gr(){
             //given
-            Kwota kwota = new Kwota(10, 0);
+            Kwota kwota = new Kwota(100, 0);
             //when
             String s = kwota.toString();
             //then
