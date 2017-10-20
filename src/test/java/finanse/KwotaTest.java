@@ -11,7 +11,7 @@ public class KwotaTest {
         //when
         String s = kwota.toString();
         //then
-        Assert.assertEquals("10,15", s);
+        Assert.assertEquals("10 zł 15 gr", s);
     }
         @Test
         public void metodaToStringDzialaDla00Gr(){
@@ -20,7 +20,7 @@ public class KwotaTest {
             //when
             String s = kwota.toString();
             //then
-            Assert.assertEquals("10,00", s);
+            Assert.assertEquals("10 zł 0 gr", s);
     }
     @Test(expected = IllegalArgumentException.class)
     public void kwotaNieMozeMiecUjemnychGroszy(){
@@ -42,6 +42,6 @@ public class KwotaTest {
         Kwota kwotaWynik = kwota.dodaj(kwota2);
         String s = kwotaWynik.toString();
         //then
-        Assert.assertEquals("25,25", s);
+        Assert.assertEquals("25 zł 25 gr", s);
     }
 }
