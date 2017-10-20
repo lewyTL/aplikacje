@@ -64,6 +64,11 @@ public class Kwota implements Comparable{
     }
 
     public int compareTo(Object o) {
-        return 0;
+        Kwota k = (Kwota) o;
+        int wartosc = zlote*100+grosze;
+        int kwartosc = k.grosze+k.zlote*100;
+        if(wartosc < kwartosc) return -1;
+        if(wartosc == kwartosc) return 0;
+        return 1;
     }
 }
