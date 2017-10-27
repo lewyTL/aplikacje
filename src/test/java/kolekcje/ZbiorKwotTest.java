@@ -15,12 +15,14 @@ public class ZbiorKwotTest {
         Kwota k1 = new Kwota();
         Kwota k2 = new Kwota(10,15);
         Kwota k3 = new Kwota (1,2);
-        Kwota[] oczekiwana = {k1, k2, k3};
+        Kwota[] oczekiwana = {k1, k3, k2};
         zbior = new TreeSet<Kwota>();
 
-        zbior.add(new Kwota());
-        zbior.add(new Kwota (1,2));
         zbior.add(new Kwota(10,15));
+        zbior.add(new Kwota (1,2));
+        zbior.add(new Kwota());
+
+
 
         Assert.assertArrayEquals(oczekiwana, zbior.toArray());
     }
