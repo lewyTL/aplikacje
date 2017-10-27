@@ -16,7 +16,7 @@ public class Kwota implements Comparable{
             this.zlote = zlote;
             this.grosze = grosze;
         }
-
+//
     }
 
     public int getZlote(){
